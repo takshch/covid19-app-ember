@@ -1,0 +1,15 @@
+<div class="cards cards--flex">
+    {{#if @data.Country}}
+        <div class="cards__heading">{{@data.Country}}</div>
+    {{else}}
+         <div class="cards__heading">Global</div>
+    {{/if}}
+    <div class="cards_body">
+        {{#each-in (OnlyNewTotal @data) as |key value|}}  
+            <div class="bagdes bagdes--flex badges--span badges--mediaquery text-center customSize bg-red">
+                <span class="badges__heading">{{SpacePascalCase key}}</span>
+                <span class="badges__body text-yellow-light">{{value}}</span>
+            </div>
+        {{/each-in}}
+    </div>
+</div>
