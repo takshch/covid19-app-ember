@@ -6,7 +6,7 @@
   - ### Desktop View
     ![Screeenshot of covid19-app-ember in desktop view](/readme_files/first.png)
   - ### Mobile View
-    ![Screeenshot of covid19-app-ember in mobile view](/readme_files/searchFirst.png)
+    ![Screeenshot of covid19-app-ember in mobile view](/readme_files/min2.png)
     
 
 
