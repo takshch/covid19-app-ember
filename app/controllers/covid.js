@@ -4,6 +4,7 @@ import { action } from '@ember/object';
 
 
 export default class CovidController extends Controller {
+    @tracked isLoading = null;
     @tracked searchData = this.model.Countries.sort(function(current,next){
         if(current['TotalConfirmed'] > next['TotalConfirmed']){
             return -1;
