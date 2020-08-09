@@ -8,4 +8,5 @@ export default class Router extends EmberRouter {
 
 Router.map(function() {
   this.route('covid', { path: '' });
+  this.route('country', { path: '/country/:country_code'});
 });

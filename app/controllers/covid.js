@@ -4,7 +4,6 @@ import { action } from '@ember/object';
 
 
 export default class CovidController extends Controller {
-    @tracked isLoading = null;
     @tracked searchData = this.model.Countries.sort(function(current,next){
         if(current['TotalConfirmed'] > next['TotalConfirmed']){
             return -1;
@@ -17,6 +16,7 @@ export default class CovidController extends Controller {
     @tracked tempData = this.searchData;
     @tracked displayData = this.tempData.slice(0,5);
     @tracked error_message = null;
+    @tracked viewmore_message = null;
 
     @action
     changeTempData(e){
@@ -27,6 +27,7 @@ export default class CovidController extends Controller {
         if(this.tempData.length === 0){
             this.error_message = "Record Not Found";
         }
+        this.viewMoreCondition();
         console.log(this.tempData);
         this.changeDisplayData(5);
     }
@@ -36,9 +37,26 @@ export default class CovidController extends Controller {
         this.displayData = this.tempData.slice(0,index);
     }
     
+    @action viewMoreCondition(){
+        if(this.tempData.length > this.index){
+            this.viewmore_message = null;
+            return true;
+        }else{
+            this.viewmore_message = "No more records with this keyword";
+            return false;
+        }
+
+    }
+
     @action 
     viewMore(){
-        this.index = this.index + 5;
-        this.changeDisplayData(this.index);
+        if(this.viewMoreCondition()){
+            this.index = this.index + 5;
+            this.changeDisplayData(this.index);
+        }
+    }
+
+    get isViewmoreNeeded(){
+        return (this.error_message || this.viewmore_message);
     }
 }

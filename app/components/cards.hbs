@@ -1,15 +1,15 @@
-<div class="cards cards--flex">
+<LinkTo @route="country" @model={{@data.CountryCode}} class="cards cards--flex cards--effects">
     {{#if @data.Country}}
         <div class="cards__heading">{{@data.Country}}</div>
     {{else}}
          <div class="cards__heading">Global</div>
     {{/if}}
     <div class="cards_body">
-        {{#each-in (OnlyNewTotal @data) as |key value|}}  
+        {{#each-in this.sortByCase as |key value|}}  
             <div class="bagdes bagdes--flex badges--span badges--mediaquery text-center customSize bg-red">
                 <span class="badges__heading">{{SpacePascalCase key}}</span>
-                <span class="badges__body text-yellow-light">{{value}}</span>
+                <span class="badges__body text-yellow-light">{{AddCommas value}}</span>
             </div>
         {{/each-in}}
     </div>
-</div>
+</LinkTo>

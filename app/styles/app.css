@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500display=swap');
 body{
 	background: #eff7f6;/* polyfil */
 	background-color: #eff7f6;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+h1{
+	font-weight: 400;
 }
 
 .text-red{
-	color: #DE0012 !important;
+	color: #C62828 !important;
 }
 
 .text-yellow-dark{
@@ -57,7 +64,7 @@ body{
 	font-size: 1.15rem;
 	font-weight: bold;
 	background: #00b4d8;
-	background-color: #00b4d8;
+	background-color: #03A9F4;
 	color: #fff;
 	padding: 7px 5px;
 	border-top-left-radius: 4px;
@@ -98,9 +105,9 @@ body{
 
 
 .badges__body{
-	font-weight: bold;
+	font-weight: 500;
 	color: #FFB302;
-	font-size: 1.05em;
+	font-size: 1.03em;
 	letter-spacing: 1px;
 }
 
@@ -120,8 +127,8 @@ body{
 }
 
 .badges__heading{
-	font-weight: 600;
-	font-size: 1.05em;
+	font-weight: 500;
+	font-size: 1em;
 }
 
 .customSize{
@@ -175,12 +182,14 @@ body{
 }
 
 .searchbar__heading{
+	/*-webkit-font-smoothing: antialiased;*/
 	position: relative;
 	z-index: 1;
 	text-align: center;
 	font-size: 2.3rem;
 	font-weight: 400;
-	transform: rotate(-2deg);
+	/*transform: rotate(-2deg);*/
+	transform: rotate(-2deg) translate3d( 0, 0, 0);
 	margin-bottom: 10px;
 }
 
@@ -233,6 +242,10 @@ body{
 
 
 
+.searchbarWrapper{
+	height: 180px;
+}
+
 
 /** ROW COLUMN*/ 
 
@@ -274,6 +287,28 @@ body{
 }
 
 
+.cards--effects{
+	text-decoration: none;
+	transition: all 250ms ease;
+}
+
+.cards--effects:hover{
+	box-shadow: 1px 1px 23px -5px rgba(0,0,0,0.2);
+	transform: translateY(-10px);
+
+}
+
+
+
+/** chart */
+.chart{
+	background: rgba(255,255,255,0.6);
+	background-color: rgba(255,255,255,0.6);
+	padding: 10px;
+}
+/** Chart End */
+
+
 
 /** error */
 .error{
@@ -281,8 +316,47 @@ body{
 	z-index: 1;
 	font-size: 1.3rem;
 	color: #DE0012;
+	font-weight: 400;
 }
 
+
+
+
+/** loading */
+
+.loading{
+  text-transform: capitalize;
+}
+
+.loading .dots {
+  animation: dot 1s infinite;
+  font-size: 45px;
+}
+
+.loading .dots:nth-of-type(1){
+	animation-delay: 0.3s;
+}
+
+.loading .dots:nth-of-type(2){
+	animation-delay: 0.6s;
+}
+
+.loading .dots:nth-of-type(3){
+  animation-delay: 0.9s;
+}
+
+
+
+@keyframes dot{
+	0%{
+  	opacity: 0;
+  }
+  100%{
+  	opacity: 1;
+  }
+}
+
+/** Loading End */
 
 
 
