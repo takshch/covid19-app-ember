@@ -1,0 +1,6 @@
+{{#if this.model.isCountry}}
+	{{#each this.model.chartjsAdatperLinks as |srcSource|}}
+		<script type="text/javascript" src={{srcSource}}></script>
+	{{/each}}
+{{/if}}
+<script type="text/javascript" src="{{this.model.isCountry}}"></script>
