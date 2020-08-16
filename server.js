@@ -1,3 +1,5 @@
+var FastBootServer = require('./node_modules/ember-fastboot-server');
+
 var server = new FastBootServer({
   distPath: '/dist'
 });
