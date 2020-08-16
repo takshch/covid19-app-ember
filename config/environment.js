@@ -23,7 +23,7 @@ module.exports = function(environment) {
     },
 
     fastboot: {
-      hostWhitelist: ['example.com', 'subdomain.example.com', /^localhost:\d+$/]
+      hostWhitelist: ['covid19-taksh.netlify.app', /^localhost:\d+$/]
     }
 
   };
