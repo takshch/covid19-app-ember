@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+
 body{
 	background: #eff7f6;/* polyfil */
 	background-color: #eff7f6;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 }
+
 
 h1{
 	font-weight: 400;
