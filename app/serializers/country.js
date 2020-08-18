@@ -20,7 +20,7 @@ export default class CountrySerializer extends JSONAPISerializer {
             	countryCode
             }
         };
-        console.log(EditedPayload);
+        // console.log(EditedPayload);
         EditedPayload.meta = {};
         return EditedPayload;
     }

@@ -14,7 +14,7 @@ export default class CountryController extends Controller {
 		let recoveredData = this.model.countryArray.map((dataObject,index) => {
 			return {x: new Date(dataObject.Date), y: dataObject.Recovered };
 		});
-		console.log(activeData);
+		// console.log(activeData);
 
 		let data = {
 			datasets: 
