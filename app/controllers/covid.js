@@ -10,6 +10,7 @@ export default class CovidController extends Controller {
       return 1;
     }
   });
+  
   @tracked index = 5;
   @tracked tempData = this.searchData;
   @tracked displayData = this.tempData.slice(0, 5);
