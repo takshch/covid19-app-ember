@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'covid19',
     environment,
@@ -13,19 +13,22 @@ module.exports = function(environment) {
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
-        Date: false
-      }
+        Date: false,
+      },
     },
 
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
+<<<<<<< HEAD
 
     fastboot: {
       hostWhitelist: ['covid19-taksh.netlify.app', /^localhost:\d+$/]
     }
 
+=======
+>>>>>>> 9625750... v3.19.0...v3.28.0
   };
 
   if (environment === 'development') {
