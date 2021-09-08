@@ -1,8 +1,7 @@
-import JSONAPIAdapter from '@ember-data/adapter/json-api';
+import ApplicationAdapter from '../adapters/application';
 
-class CountryAdapter extends JSONAPIAdapter{
-	host = 'https://api.covid19api.com';
-	namespace='total/dayone';
+class CountryAdapter extends ApplicationAdapter {
+  namespace = 'total/dayone';
 }
 
 export default CountryAdapter;

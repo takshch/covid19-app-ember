@@ -1,9 +1,9 @@
-import JSONAPIAdapter from '@ember-data/adapter/json-api';
+import ApplicationAdapter from '../adapters/application';
 
-export default class CovidAdapter extends JSONAPIAdapter {
-  host = 'https://api.covid19api.com';
+export default class CovidAdapter extends ApplicationAdapter {
+  namespace = 'summary';
 
-  buildURL(...args){
-    return `https://api.covid19api.com/summary`;
+  pathForType() {
+    return '';
   }
 }
