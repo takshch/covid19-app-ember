@@ -27,8 +27,8 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd covid19`
+* `git clone https://github.com/takshch/covid19-app-ember`
+* `cd covid19-app-ember`
 * `npm install`
 
 ## Running / Development
