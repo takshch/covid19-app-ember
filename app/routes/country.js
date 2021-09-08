@@ -1,6 +1,5 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
-import fetch from 'fetch';
 
 export default class CountryRoute extends Route {
   @service store;
