@@ -21,14 +21,10 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
-<<<<<<< HEAD
 
     fastboot: {
-      hostWhitelist: ['covid19-taksh.netlify.app', /^localhost:\d+$/]
-    }
-
-=======
->>>>>>> 9625750... v3.19.0...v3.28.0
+      hostWhitelist: ['covid19-taksh.netlify.app', /^localhost:\d+$/],
+    },
   };
 
   if (environment === 'development') {

@@ -9,8 +9,8 @@ export default class CovidRoute extends Route {
   @service fastboot;
   @reads('fastboot.isFastBoot') isFastBoot;
 
-  model(){
-  	console.log("isFastboot:" ,this.isFastBoot);
+  model() {
+    console.log('isFastboot:', this.isFastBoot);
     return this.store.queryRecord('covid', {});
   }
 }

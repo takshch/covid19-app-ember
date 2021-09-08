@@ -1,47 +1,55 @@
 {{#if @model.Global}}
-    <div class="row top-fix m-auto">
-        
-        <div class="column-1 col-center">
-            <Cards @data={{@model.Global}} />
-        </div>
-
-        <div class="column-1 flex-center">
-            <div class="searchbarWrapper">
-                <div class="flex-center">
-                    <span class="searchbar__heading">View By Country</span>
-                </div>
-                <div class="searchbar">
-                    <span class="searchbar__icon">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </span>
-                    <input type="text" placeholder="Search here" {{on "keyup"  this.changeTempData}}>
-                </div>
-                {{#if this.error_message}}
-                    <div class="flex-center">
-                        <span class="error">{{this.error_message}}</span>
-                    </div>
-                {{/if}}
-            </div>
-        </div>
+  <div class="row top-fix m-auto">
+    <div class="column-1 col-center">
+      <Cards @data={{@model.Global}} />
     </div>
-
-    {{#unless this.error_message}}
-    <h1 class="flex-center text-center">Click on the box to see the full information</h1>
-    {{/unless}}
-
-    <div class="row m-auto">
-        <div class="column-1  col-center colf-wrap space-evenly">        
-            {{#each this.displayData as  |key|}}
-                    <Cards @data={{key}} />
-            {{/each}}  
+    <div class="column-1 flex-center">
+      <div class="searchbarWrapper">
+        <div class="flex-center">
+          <span class="searchbar__heading">
+            View By Country
+          </span>
         </div>
+        <div class="searchbar">
+          <span class="searchbar__icon">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </span>
+          <input
+            type="text"
+            placeholder="Search here"
+            {{on 'keyup' this.changeTempData}}
+          />
+        </div>
+        {{#if this.error_message}}
+          <div class="flex-center">
+            <span class="error">
+              {{this.error_message}}
+            </span>
+          </div>
+        {{/if}}
+      </div>
     </div>
-     {{#if this.viewmore_message}}
-        <h1 class="flex-center text-center">{{this.viewmore_message}}</h1>
-    {{/if}}
-
-    {{#unless this.isViewmoreNeeded}}
-        <button class="viewmore_button" {{on "click" this.viewMore}}>View More</button>
-    {{/unless}}
-
+  </div>
+  {{#unless this.error_message}}
+    <h1 class="flex-center text-center">
+      Click on the box to see the full information
+    </h1>
+  {{/unless}}
+  <div class="row m-auto">
+    <div class="column-1  col-center colf-wrap space-evenly">
+      {{#each this.displayData as |key|}}
+        <Cards @data={{key}} />
+      {{/each}}
+    </div>
+  </div>
+  {{#if this.viewmore_message}}
+    <h1 class="flex-center text-center">
+      {{this.viewmore_message}}
+    </h1>
+  {{/if}}
+  {{#unless this.isViewmoreNeeded}}
+    <button class="viewmore_button" {{on 'click' this.viewMore}}>
+      View More
+    </button>
+  {{/unless}}
 {{/if}}

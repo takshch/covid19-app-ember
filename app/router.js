@@ -6,11 +6,7 @@ export default class Router extends EmberRouter {
   rootURL = config.rootURL;
 }
 
-<<<<<<< HEAD
-Router.map(function() {
+Router.map(function () {
   this.route('covid', { path: '' });
-  this.route('country', { path: '/country/:country_code'});
+  this.route('country', { path: '/country/:country_code' });
 });
-=======
-Router.map(function () {});
->>>>>>> 9625750... v3.19.0...v3.28.0

@@ -3,9 +3,9 @@ import { inject as service } from '@ember/service';
 import fetch from 'fetch';
 
 export default class CountryRoute extends Route {
-	@service store;
+  @service store;
 
-	model(params){
-		return this.store.findRecord('country', params.country_code);
-	}
+  model(params) {
+    return this.store.findRecord('country', params.country_code);
+  }
 }
