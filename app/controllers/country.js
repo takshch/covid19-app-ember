@@ -26,7 +26,6 @@ export default class CountryController extends Controller {
   }
 }
 
-
 const dataSets = (confirmedData, deathData, activeData, recoveredData) => [
   {
     label: 'Confirmed', // Name the series
@@ -76,8 +75,7 @@ const optionsObject = {
     labels: {
       fontColor: 'black',
       fontSize: 16,
-      fontFamily:
-        "'Roboto','Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+      fontFamily: "'Roboto','Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
       padding: 9,
       lineHeight: 1.5,
       labelString: 'Covid19 Records of US',
