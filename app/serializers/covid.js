@@ -6,7 +6,6 @@ export default class CovidSerializer extends JSONAPISerializer {
   }
 
   normalizeResponse(store, primaryModelClass, payload, id, requestType) {
-    // console.log(payload);
 
     payload.data = {
       type: 'covid',
@@ -20,7 +19,6 @@ export default class CovidSerializer extends JSONAPISerializer {
     delete payload.Global;
     delete payload.Date;
 
-    // console.log(payload);
     return super.normalizeResponse(...arguments);
   }
 }
