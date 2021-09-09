@@ -6,7 +6,6 @@ export default class CovidSerializer extends JSONAPISerializer {
   }
 
   normalizeResponse(store, primaryModelClass, payload, id, requestType) {
-
     payload.data = {
       type: 'covid',
       id: 'covid',
