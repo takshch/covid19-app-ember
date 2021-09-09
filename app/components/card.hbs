@@ -1,23 +1,25 @@
-{{#let @data.CountryCode @data.Country as |countryCode countryName|}}
-  <LinkTo
-    @route="country"
-    @model={{countryCode}}
-    class="cards cards--flex cards--effects"
-  >
-    <div class="cards__heading">
-      {{if countryName countryName 'Global'}}
-    </div>
-    <div class="cards_body">
-      {{#each-in this.sortByCase as |key value|}}
-        <div class="bagdes bagdes--flex badges--span badges--mediaquery text-center customSize bg-red">
-          <span class="badges__heading">
-            {{space-pascal-case key}}
-          </span>
-          <span class="badges__body text-yellow-light">
-            {{add-commas number=value}}
-          </span>
-        </div>
-      {{/each-in}}
-    </div>
-  </LinkTo>
-{{/let}}
+{{#if @data}}
+  {{#let @data.CountryCode @data.Country as |countryCode countryName|}}
+    <LinkTo
+      @route="country"
+      @model={{countryCode}}
+      class="cards cards--flex cards--effects"
+    >
+      <div class="cards__heading">
+        {{if countryName countryName 'Global'}}
+      </div>
+      <div class="cards_body">
+        {{#each-in this.sortByCase as |key value|}}
+          <div class="bagdes bagdes--flex badges--span badges--mediaquery text-center customSize bg-red">
+            <span class="badges__heading">
+              {{space-pascal-case key}}
+            </span>
+            <span class="badges__body text-yellow-light">
+              {{add-commas number=value}}
+            </span>
+          </div>
+        {{/each-in}}
+      </div>
+    </LinkTo>
+  {{/let}}
+{{/if}}
