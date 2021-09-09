@@ -1,6 +1,6 @@
 import Component from '@glimmer/component';
 
-export default class CardsComponent extends Component {
+export default class CardComponent extends Component {
   get sortByCase() {
     let { data } = this.args;
     let keywordsAllowed = ['New', 'Total'];
