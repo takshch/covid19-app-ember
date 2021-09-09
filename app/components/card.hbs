@@ -4,17 +4,18 @@
       @route="country"
       @model={{countryCode}}
       class="cards cards--flex cards--effects"
+      data-test-card
     >
-      <div class="cards__heading">
+      <div class="cards__heading" data-test-card-heading>
         {{if countryName countryName 'Global'}}
       </div>
-      <div class="cards_body">
+      <div class="cards_body" data-test-card-body>
         {{#each-in this.sortByCase as |key value|}}
-          <div class="bagdes bagdes--flex badges--span badges--mediaquery text-center customSize bg-red">
-            <span class="badges__heading">
+          <div class="bagdes bagdes--flex badges--span badges--mediaquery text-center customSize bg-red" data-test-card-badge>
+            <span class="badges__heading" data-test-card-badge-heading>
               {{space-pascal-case key}}
             </span>
-            <span class="badges__body text-yellow-light">
+            <span class="badges__body text-yellow-light" data-test-card-badge-value>
               {{add-commas number=value}}
             </span>
           </div>

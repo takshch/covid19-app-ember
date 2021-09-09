@@ -21,7 +21,7 @@ module('Integration | Helper | space-pascal-case', function (hooks) {
 
     assert.dom(this.element).hasText('');
   });
-  
+
   test('should return nothing if string is not PascalCase formatted', async function (assert) {
     this.set('string', 'camelCase');
 
